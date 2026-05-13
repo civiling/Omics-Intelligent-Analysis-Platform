@@ -1,0 +1,19 @@
+parameters:
+  grouping_variable:
+    default: null
+    description: Metadata variable used for the primary contrast.
+  contrast:
+    default: null
+    description: Group comparison or continuous association to test.
+  covariates:
+    default: []
+    description: Adjustment variables to include in the model.
+  prevalence_filter:
+    default: null
+    description: Minimum feature prevalence threshold.
+  fdr_threshold:
+    default: 0.05
+    description: Adjusted p-value threshold.
+  normalization_strategy:
+    default: method_specific
+    description: Normalization should follow the selected compositional method.

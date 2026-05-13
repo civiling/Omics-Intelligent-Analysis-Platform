@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill input schema",
+  "type": "object",
+  "required": ["inputs", "metadata"],
+  "properties": {
+    "inputs": {
+      "type": "object",
+      "description": "Named input artifacts for this skill."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Sample and analysis metadata."
+    }
+  }
+}

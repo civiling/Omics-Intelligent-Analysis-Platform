@@ -1,0 +1,22 @@
+parameters:
+  omics_layers:
+    default: []
+    description: Omics matrices to include in the association network.
+  sample_id_column:
+    default: sample_id
+    description: Column used to align samples across layers.
+  correlation_method:
+    default: spearman
+    description: Spearman, SparCC, mixOmics, or another reviewed method.
+  covariates:
+    default: []
+    description: Covariates to record or adjust for where supported.
+  fdr_threshold:
+    default: 0.05
+    description: Multiple-testing threshold for retained edges.
+  edge_filter:
+    default: null
+    description: Effect-size or score threshold for network edges.
+  network_layout:
+    default: force_directed
+    description: Suggested visualization layout.

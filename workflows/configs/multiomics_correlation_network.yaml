@@ -1,0 +1,27 @@
+id: multiomics.correlation_network
+name: Multi-omics correlation network workflow
+domain: multiomics
+version: 0.1.0
+description: Placeholder workflow for multi-omics correlation network analysis.
+skill_id: multiomics.correlation_network
+executor_type: placeholder
+script_path: workflows/scripts/multiomics/correlation_network_placeholder.py
+input_types:
+  - feature_table
+  - expression_matrix
+  - metabolite_matrix
+  - metadata
+output_types:
+  - correlation_edge_table
+  - network_plot_spec
+  - method_note
+  - risk_notes
+default_parameters:
+  method: Spearman
+  fdr_threshold: 0.05
+  edge_filter: null
+required_parameters:
+  - sample_id_column
+timeout_seconds: 3600
+risk_level: high
+requires_review: true

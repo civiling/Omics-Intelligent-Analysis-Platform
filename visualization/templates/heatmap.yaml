@@ -1,0 +1,5 @@
+chart_type: heatmap
+required_fields:
+  - x
+  - y
+  - color_by

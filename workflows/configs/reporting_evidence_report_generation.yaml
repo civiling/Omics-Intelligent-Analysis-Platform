@@ -1,0 +1,25 @@
+id: reporting.evidence_report_generation
+name: Evidence report generation workflow
+domain: reporting
+version: 0.1.0
+description: Placeholder workflow for evidence question generation and report drafting.
+skill_id: reporting.evidence_report_generation
+executor_type: placeholder
+script_path: workflows/scripts/reporting/evidence_report_generation_placeholder.py
+input_types:
+  - analysis_result_table
+  - method_note
+  - risk_notes
+output_types:
+  - literature_search_questions
+  - evidence_labels
+  - report_draft
+  - review_checklist
+default_parameters:
+  evidence_scope: result_level
+  target_audience: scientific_review
+  review_status: pending_expert_review
+required_parameters: []
+timeout_seconds: 1800
+risk_level: high
+requires_review: true

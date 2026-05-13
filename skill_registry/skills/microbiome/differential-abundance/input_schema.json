@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Differential abundance inputs",
+  "type": "object",
+  "required": ["feature_table", "metadata"],
+  "properties": {
+    "feature_table": {"type": "string"},
+    "taxonomy_table": {"type": "string"},
+    "metadata": {"type": "string"},
+    "design": {
+      "type": "object",
+      "properties": {
+        "grouping_variable": {"type": "string"},
+        "contrast": {"type": "string"},
+        "covariates": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

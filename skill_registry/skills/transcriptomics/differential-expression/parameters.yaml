@@ -1,0 +1,19 @@
+parameters:
+  design_formula:
+    default: null
+    description: Statistical design formula including condition and covariates.
+  contrast:
+    default: null
+    description: Primary comparison to estimate.
+  batch_variables:
+    default: []
+    description: Batch or technical variables to record and model when appropriate.
+  fdr_threshold:
+    default: 0.05
+    description: Adjusted p-value threshold.
+  lfc_threshold:
+    default: null
+    description: Optional log fold-change threshold.
+  normalization_strategy:
+    default: method_specific
+    description: Use normalization recommended by DESeq2, edgeR, limma, or PyDESeq2.

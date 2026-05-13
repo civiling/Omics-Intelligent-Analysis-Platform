@@ -1,0 +1,17 @@
+id: domain.workflow_name
+name: Workflow display name
+domain: domain
+version: 0.1.0
+description: Placeholder workflow description.
+skill_id: domain.skill_name
+executor_type: placeholder
+script_path: workflows/scripts/domain/workflow_placeholder.py
+input_types:
+  - input_type
+output_types:
+  - output_type
+default_parameters: {}
+required_parameters: []
+timeout_seconds: 3600
+risk_level: medium
+requires_review: true

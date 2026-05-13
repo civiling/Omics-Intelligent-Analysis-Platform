@@ -1,0 +1,27 @@
+id: transcriptomics.differential_expression
+name: Transcriptomics differential expression workflow
+domain: transcriptomics
+version: 0.1.0
+description: Placeholder workflow for RNA-seq differential expression analysis.
+skill_id: transcriptomics.differential_expression
+executor_type: placeholder
+script_path: workflows/scripts/transcriptomics/differential_expression_placeholder.py
+input_types:
+  - count_matrix
+  - gene_annotation
+  - metadata
+output_types:
+  - differential_gene_table
+  - volcano_plot_spec
+  - method_note
+  - risk_notes
+default_parameters:
+  method: DESeq2
+  fdr_threshold: 0.05
+  lfc_threshold: null
+required_parameters:
+  - design_formula
+  - contrast
+timeout_seconds: 3600
+risk_level: medium
+requires_review: true

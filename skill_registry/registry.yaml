@@ -1,0 +1,176 @@
+skills:
+  - id: microbiome.read_qc
+    name: Microbiome read and feature table QC
+    domain: microbiome
+    version: 0.1.0
+    status: active
+    description: Basic QC specification for microbiome reads, ASV/OTU tables, taxonomy tables, and sample metadata.
+    path: skills/microbiome/read-qc
+    input_types:
+      - reads
+      - feature_table
+      - taxonomy_table
+      - metadata
+    output_types:
+      - qc_summary
+      - filtering_recommendation
+      - method_note
+      - risk_notes
+    primary_tools:
+      - FastQC
+      - MultiQC
+      - QIIME 2
+      - DADA2
+    risk_level: low
+    requires_review: false
+    next_skills:
+      - microbiome.differential_abundance
+      - multiomics.correlation_network
+      - reporting.evidence_report_generation
+    executor:
+      type: placeholder
+      path: null
+
+  - id: microbiome.differential_abundance
+    name: Differential abundance analysis
+    domain: microbiome
+    version: 0.1.0
+    status: active
+    description: Differential microbiome abundance analysis specification with compositional data safeguards.
+    path: skills/microbiome/differential-abundance
+    input_types:
+      - feature_table
+      - taxonomy_table
+      - metadata
+    output_types:
+      - differential_taxa_table
+      - volcano_plot_spec
+      - method_note
+      - risk_notes
+    primary_tools:
+      - ANCOM-BC2
+      - ALDEx2
+      - MaAsLin2
+    risk_level: medium
+    requires_review: true
+    next_skills:
+      - multiomics.correlation_network
+      - reporting.evidence_report_generation
+    executor:
+      type: placeholder
+      path: null
+
+  - id: transcriptomics.differential_expression
+    name: Transcriptomics differential expression analysis
+    domain: transcriptomics
+    version: 0.1.0
+    status: active
+    description: RNA-seq differential expression specification for count matrices and sample metadata.
+    path: skills/transcriptomics/differential-expression
+    input_types:
+      - count_matrix
+      - gene_annotation
+      - metadata
+    output_types:
+      - differential_gene_table
+      - volcano_plot_spec
+      - method_note
+      - risk_notes
+    primary_tools:
+      - DESeq2
+      - edgeR
+      - limma
+      - PyDESeq2
+    risk_level: medium
+    requires_review: true
+    next_skills:
+      - multiomics.correlation_network
+      - reporting.evidence_report_generation
+    executor:
+      type: placeholder
+      path: null
+
+  - id: metabolomics.differential_metabolites
+    name: Metabolomics differential metabolite analysis
+    domain: metabolomics
+    version: 0.1.0
+    status: active
+    description: Differential metabolite analysis specification for peak tables, annotations, and sample metadata.
+    path: skills/metabolomics/differential-metabolites
+    input_types:
+      - peak_table
+      - metabolite_annotation
+      - metadata
+    output_types:
+      - differential_metabolite_table
+      - pathway_enrichment_spec
+      - method_note
+      - risk_notes
+    primary_tools:
+      - MetaboAnalystR
+      - pyOpenMS
+      - custom statistical scripts
+    risk_level: medium
+    requires_review: true
+    next_skills:
+      - multiomics.correlation_network
+      - reporting.evidence_report_generation
+    executor:
+      type: placeholder
+      path: null
+
+  - id: multiomics.correlation_network
+    name: Multi-omics correlation network analysis
+    domain: multiomics
+    version: 0.1.0
+    status: active
+    description: Association network specification across microbes, genes, metabolites, phenotypes, or other omics layers.
+    path: skills/multiomics/correlation-network
+    input_types:
+      - feature_table
+      - expression_matrix
+      - metabolite_matrix
+      - metadata
+    output_types:
+      - correlation_edge_table
+      - network_plot_spec
+      - method_note
+      - risk_notes
+    primary_tools:
+      - Spearman
+      - SparCC
+      - mixOmics
+    risk_level: high
+    requires_review: true
+    next_skills:
+      - reporting.evidence_report_generation
+    executor:
+      type: placeholder
+      path: null
+
+  - id: reporting.evidence_report_generation
+    name: Evidence report generation
+    domain: reporting
+    version: 0.1.0
+    status: active
+    description: Evidence question, evidence label, and report paragraph drafting specification based on analysis results.
+    path: skills/reporting/evidence-report-generation
+    input_types:
+      - analysis_result_table
+      - method_note
+      - risk_notes
+    output_types:
+      - literature_search_questions
+      - evidence_labels
+      - report_draft
+      - review_checklist
+    primary_tools:
+      - literature database query planning
+      - evidence grading rubric
+      - report template
+    risk_level: high
+    requires_review: true
+    next_skills: []
+    executor:
+      type: placeholder
+      path: null

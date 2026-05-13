@@ -1,0 +1,5 @@
+{
+  "feature_table": "data/feature.tsv",
+  "taxonomy_table": "data/taxonomy.tsv",
+  "metadata": "data/metadata.tsv"
+}

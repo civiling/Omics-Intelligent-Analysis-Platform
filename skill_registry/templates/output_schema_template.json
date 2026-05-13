@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill output schema",
+  "type": "object",
+  "required": ["outputs", "method_note", "risk_notes"],
+  "properties": {
+    "outputs": {
+      "type": "object",
+      "description": "Named output artifacts produced by a future executor."
+    },
+    "method_note": {
+      "type": "string"
+    },
+    "risk_notes": {
+      "type": "string"
+    }
+  }
+}

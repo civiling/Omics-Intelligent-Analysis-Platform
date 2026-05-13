@@ -1,0 +1,13 @@
+parameters:
+  min_reads_per_sample:
+    default: null
+    description: Project-specific minimum read depth threshold.
+  min_feature_prevalence:
+    default: null
+    description: Project-specific minimum feature prevalence threshold.
+  taxonomy_confidence_threshold:
+    default: null
+    description: Minimum taxonomy assignment confidence, if available.
+  missing_metadata_policy:
+    default: report_and_review
+    description: Missing metadata must be reported before downstream analysis.

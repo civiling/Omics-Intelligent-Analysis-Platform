@@ -1,0 +1,4 @@
+type: placeholder
+path: null
+description: Phase-one registry placeholder; no multi-omics network workflow is executed.
+runtime: none

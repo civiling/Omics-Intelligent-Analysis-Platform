@@ -1,0 +1,4 @@
+type: placeholder
+path: null
+description: Phase-one registry placeholder; no differential abundance workflow is executed.
+runtime: none

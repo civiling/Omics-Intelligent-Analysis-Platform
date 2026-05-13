@@ -1,0 +1,118 @@
+{
+  "task_id": "cli_f57dd86ef8",
+  "user_query": "microbiome differential abundance",
+  "selected_domain": "microbiome",
+  "selected_specialist_agent": "microbiome",
+  "selected_skill_id": "microbiome.differential_abundance",
+  "selected_workflow_id": "microbiome.differential_abundance",
+  "parameters": {
+    "method": "ANCOM-BC2",
+    "fdr_threshold": 0.05,
+    "low_abundance_filter": true,
+    "group_column": "group"
+  },
+  "missing_inputs": [],
+  "risk_level": "medium",
+  "requires_review": true,
+  "run_id": "run_20260513_174010_65f496",
+  "status": "success",
+  "error_message": null,
+  "created_at": "2026-05-13T17:40:10.154585",
+  "actions": [
+    {
+      "action_id": "action_10e037f23d",
+      "task_id": "cli_f57dd86ef8",
+      "action_type": "plan",
+      "tool_name": "AgentPlanner.build_plan",
+      "input_payload": {
+        "user_query": "microbiome differential abundance",
+        "domain": "microbiome"
+      },
+      "output_payload": {
+        "task_id": "cli_f57dd86ef8",
+        "selected_skill_id": "microbiome.differential_abundance",
+        "selected_workflow_id": "microbiome.differential_abundance",
+        "specialist_agent": "microbiome",
+        "reasoning": "Domain was provided explicitly as microbiome. Selected skill microbiome.differential_abundance through microbiome specialist.",
+        "missing_inputs": [],
+        "parameters": {
+          "method": "ANCOM-BC2",
+          "fdr_threshold": 0.05,
+          "low_abundance_filter": true,
+          "group_column": "group"
+        },
+        "risk_level": "medium",
+        "requires_review": true,
+        "next_steps": [
+          "multiomics.correlation_network",
+          "reporting.evidence_report_generation"
+        ]
+      },
+      "status": "planned",
+      "error_message": null,
+      "created_at": "2026-05-13T17:40:10.141628"
+    },
+    {
+      "action_id": "action_feb91ecd88",
+      "task_id": "cli_f57dd86ef8",
+      "action_type": "workflow_run",
+      "tool_name": "WorkflowTool.run_workflow",
+      "input_payload": {
+        "workflow_id": "microbiome.differential_abundance",
+        "skill_id": "microbiome.differential_abundance",
+        "parameters": {
+          "method": "ANCOM-BC2",
+          "fdr_threshold": 0.05,
+          "low_abundance_filter": true,
+          "group_column": "group"
+        }
+      },
+      "output_payload": {
+        "run_id": "run_20260513_174010_65f496",
+        "status": "success",
+        "output_files": {
+          "tables/differential_taxa.tsv": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\tables\\differential_taxa.tsv",
+          "figures/volcano_plot_spec.json": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\figures\\volcano_plot_spec.json",
+          "notes/method_note.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\method_note.md",
+          "notes/risk_notes.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\risk_notes.md"
+        },
+        "metrics": {
+          "placeholder": true,
+          "input_count": 3,
+          "parameter_count": 4,
+          "output_count": 4
+        },
+        "logs": {
+          "stdout": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\logs\\stdout.log",
+          "stderr": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\logs\\stderr.log"
+        },
+        "manifest_path": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\manifest.json",
+        "error_message": null
+      },
+      "status": "success",
+      "error_message": null,
+      "created_at": "2026-05-13T17:40:10.150312"
+    }
+  ],
+  "result": {
+    "task_id": "cli_f57dd86ef8",
+    "status": "success",
+    "selected_skill_id": "microbiome.differential_abundance",
+    "selected_workflow_id": "microbiome.differential_abundance",
+    "run_id": "run_20260513_174010_65f496",
+    "summary": "Generated tables: 1, figures: 1, notes: 2.",
+    "output_files": {
+      "tables/differential_taxa.tsv": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\tables\\differential_taxa.tsv",
+      "figures/volcano_plot_spec.json": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\figures\\volcano_plot_spec.json",
+      "notes/method_note.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\method_note.md",
+      "notes/risk_notes.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\risk_notes.md"
+    },
+    "risk_notes": "# Risk Notes\n\nRelative abundance changes are not absolute abundance changes; t-tests are not final evidence.\n",
+    "requires_review": true,
+    "next_steps": [
+      "multiomics.correlation_network",
+      "reporting.evidence_report_generation"
+    ],
+    "error_message": null
+  }
+}

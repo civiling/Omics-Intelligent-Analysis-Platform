@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence report generation outputs",
+  "type": "object",
+  "required": ["literature_search_questions", "evidence_labels", "report_draft", "review_checklist"],
+  "properties": {
+    "literature_search_questions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "evidence_labels": {"type": "object"},
+    "report_draft": {"type": "string"},
+    "review_checklist": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

@@ -1,0 +1,16 @@
+parameters:
+  evidence_scope:
+    default: result_level
+    description: Scope of literature questions and evidence labeling.
+  target_audience:
+    default: scientific_review
+    description: Intended audience for the draft report.
+  evidence_level_rubric:
+    default: project_default
+    description: Rubric used to label evidence strength.
+  review_status:
+    default: pending_expert_review
+    description: Review status attached to draft claims.
+  citation_policy:
+    default: cite_only_after_verification
+    description: Citations should be attached only after source verification.

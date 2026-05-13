@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Microbiome read QC inputs",
+  "type": "object",
+  "required": ["metadata"],
+  "properties": {
+    "reads": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "FASTQ or read-level QC artifact paths."
+    },
+    "feature_table": {
+      "type": "string",
+      "description": "ASV/OTU or microbiome feature table path."
+    },
+    "taxonomy_table": {
+      "type": "string",
+      "description": "Taxonomy annotation table path."
+    },
+    "metadata": {
+      "type": "string",
+      "description": "Sample metadata table path."
+    }
+  }
+}

@@ -1,0 +1,4 @@
+chart_type: barplot
+required_fields:
+  - x
+  - y

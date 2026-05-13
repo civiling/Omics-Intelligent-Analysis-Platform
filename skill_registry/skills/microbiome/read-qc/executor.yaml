@@ -1,0 +1,4 @@
+type: placeholder
+path: null
+description: Phase-one registry placeholder; no microbiome QC workflow is executed.
+runtime: none

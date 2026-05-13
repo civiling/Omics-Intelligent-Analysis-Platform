@@ -1,0 +1,22 @@
+parameters:
+  grouping_variable:
+    default: null
+    description: Metadata variable used for the primary comparison.
+  contrast:
+    default: null
+    description: Primary group comparison or association.
+  normalization_strategy:
+    default: null
+    description: Peak table normalization method to record.
+  transformation:
+    default: log_or_method_specific
+    description: Transformation to record before statistical testing.
+  missing_value_policy:
+    default: report_and_review
+    description: Missing value strategy must be explicit.
+  fdr_threshold:
+    default: 0.05
+    description: Adjusted p-value threshold.
+  annotation_level:
+    default: null
+    description: Metabolite identification confidence level.

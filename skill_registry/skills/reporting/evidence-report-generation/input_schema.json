@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence report generation inputs",
+  "type": "object",
+  "required": ["analysis_result_table", "method_note", "risk_notes"],
+  "properties": {
+    "analysis_result_table": {"type": "string"},
+    "method_note": {"type": "string"},
+    "risk_notes": {"type": "string"},
+    "evidence_scope": {"type": "string"}
+  }
+}

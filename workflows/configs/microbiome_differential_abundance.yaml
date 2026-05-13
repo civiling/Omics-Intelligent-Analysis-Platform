@@ -1,0 +1,26 @@
+id: microbiome.differential_abundance
+name: Microbiome differential abundance workflow
+domain: microbiome
+version: 0.1.0
+description: Placeholder workflow for microbiome differential abundance analysis.
+skill_id: microbiome.differential_abundance
+executor_type: placeholder
+script_path: workflows/scripts/microbiome/differential_abundance_placeholder.py
+input_types:
+  - feature_table
+  - taxonomy_table
+  - metadata
+output_types:
+  - differential_taxa_table
+  - volcano_plot_spec
+  - method_note
+  - risk_notes
+default_parameters:
+  method: ANCOM-BC2
+  fdr_threshold: 0.05
+  low_abundance_filter: true
+required_parameters:
+  - group_column
+timeout_seconds: 3600
+risk_level: medium
+requires_review: true

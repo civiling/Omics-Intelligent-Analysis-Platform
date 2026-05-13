@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Differential expression inputs",
+  "type": "object",
+  "required": ["count_matrix", "metadata"],
+  "properties": {
+    "count_matrix": {"type": "string"},
+    "gene_annotation": {"type": "string"},
+    "metadata": {"type": "string"},
+    "design": {
+      "type": "object",
+      "properties": {
+        "design_formula": {"type": "string"},
+        "contrast": {"type": "string"},
+        "batch_variables": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

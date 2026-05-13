@@ -1,0 +1,6 @@
+{
+  "chart": "volcano",
+  "x": "log_fold_change",
+  "y": "-log10_adjusted_p_value",
+  "source": "placeholder"
+}

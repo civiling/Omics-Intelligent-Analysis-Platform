@@ -1,0 +1,26 @@
+id: metabolomics.differential_metabolites
+name: Metabolomics differential metabolites workflow
+domain: metabolomics
+version: 0.1.0
+description: Placeholder workflow for metabolomics differential metabolite analysis.
+skill_id: metabolomics.differential_metabolites
+executor_type: placeholder
+script_path: workflows/scripts/metabolomics/differential_metabolites_placeholder.py
+input_types:
+  - peak_table
+  - metabolite_annotation
+  - metadata
+output_types:
+  - differential_metabolite_table
+  - pathway_enrichment_spec
+  - method_note
+  - risk_notes
+default_parameters:
+  method: moderated_statistical_test
+  fdr_threshold: 0.05
+  missing_value_policy: report_and_review
+required_parameters:
+  - group_column
+timeout_seconds: 3600
+risk_level: medium
+requires_review: true

@@ -1,0 +1,10 @@
+default_report_type: expert_report
+required_sections:
+  - data_overview
+  - methodology
+  - main_results
+  - visualization
+  - evidence
+  - risk_warnings
+  - review_status
+  - appendix

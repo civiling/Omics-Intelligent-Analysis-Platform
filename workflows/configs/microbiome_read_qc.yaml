@@ -1,0 +1,26 @@
+id: microbiome.read_qc
+name: Microbiome read QC workflow
+domain: microbiome
+version: 0.1.0
+description: Placeholder workflow for microbiome read and feature table QC.
+skill_id: microbiome.read_qc
+executor_type: placeholder
+script_path: workflows/scripts/microbiome/read_qc_placeholder.py
+input_types:
+  - reads
+  - feature_table
+  - taxonomy_table
+  - metadata
+output_types:
+  - qc_summary
+  - filtering_recommendation
+  - method_note
+  - risk_notes
+default_parameters:
+  min_reads_per_sample: null
+  min_feature_prevalence: null
+  missing_metadata_policy: report_and_review
+required_parameters: []
+timeout_seconds: 1800
+risk_level: low
+requires_review: false

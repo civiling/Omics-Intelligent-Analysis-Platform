@@ -1,0 +1,4 @@
+type: placeholder
+path: null
+description: Registry-only placeholder. No workflow is executed in phase one.
+runtime: none

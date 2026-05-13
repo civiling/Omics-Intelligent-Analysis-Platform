@@ -1,0 +1,71 @@
+{
+  "run_id": "run_20260513_174010_65f496",
+  "workflow_id": "microbiome.differential_abundance",
+  "skill_id": "microbiome.differential_abundance",
+  "status": "success",
+  "input_files": {
+    "feature_table": "data/feature.tsv",
+    "taxonomy_table": "data/taxonomy.tsv",
+    "metadata": "data/metadata.tsv"
+  },
+  "parameters": {
+    "method": "ANCOM-BC2",
+    "fdr_threshold": 0.05,
+    "low_abundance_filter": true,
+    "group_column": "group"
+  },
+  "output_files": {
+    "tables/differential_taxa.tsv": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\tables\\differential_taxa.tsv",
+    "figures/volcano_plot_spec.json": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\figures\\volcano_plot_spec.json",
+    "notes/method_note.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\method_note.md",
+    "notes/risk_notes.md": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\outputs\\notes\\risk_notes.md"
+  },
+  "metrics": {
+    "placeholder": true,
+    "input_count": 3,
+    "parameter_count": 4,
+    "output_count": 4
+  },
+  "logs": {
+    "stdout": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\logs\\stdout.log",
+    "stderr": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\runs\\run_20260513_174010_65f496\\logs\\stderr.log"
+  },
+  "started_at": "2026-05-13T17:40:10.143229",
+  "finished_at": "2026-05-13T17:40:10.148339",
+  "duration_seconds": 0.00511,
+  "error_message": null,
+  "workflow_config": {
+    "id": "microbiome.differential_abundance",
+    "name": "Microbiome differential abundance workflow",
+    "domain": "microbiome",
+    "version": "0.1.0",
+    "description": "Placeholder workflow for microbiome differential abundance analysis.",
+    "skill_id": "microbiome.differential_abundance",
+    "executor_type": "placeholder",
+    "script_path": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\workflows\\scripts\\microbiome\\differential_abundance_placeholder.py",
+    "input_types": [
+      "feature_table",
+      "taxonomy_table",
+      "metadata"
+    ],
+    "output_types": [
+      "differential_taxa_table",
+      "volcano_plot_spec",
+      "method_note",
+      "risk_notes"
+    ],
+    "default_parameters": {
+      "method": "ANCOM-BC2",
+      "fdr_threshold": 0.05,
+      "low_abundance_filter": true
+    },
+    "required_parameters": [
+      "group_column"
+    ],
+    "timeout_seconds": 3600,
+    "risk_level": "medium",
+    "requires_review": true,
+    "config_path": "D:\\chaohui\\Omics-Intelligent-Analysis-Platform\\workflows\\configs\\microbiome_differential_abundance.yaml"
+  },
+  "executor_type": "placeholder"
+}

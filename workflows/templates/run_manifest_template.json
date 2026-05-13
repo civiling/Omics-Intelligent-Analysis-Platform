@@ -1,0 +1,20 @@
+{
+  "run_id": "run_YYYYMMDD_HHMMSS_xxxxxx",
+  "workflow_id": "domain.workflow_name",
+  "skill_id": "domain.skill_name",
+  "status": "pending",
+  "input_files": {},
+  "parameters": {},
+  "output_files": {},
+  "metrics": {},
+  "logs": {
+    "stdout": "logs/stdout.log",
+    "stderr": "logs/stderr.log"
+  },
+  "started_at": null,
+  "finished_at": null,
+  "duration_seconds": null,
+  "error_message": null,
+  "workflow_config": {},
+  "executor_type": "placeholder"
+}

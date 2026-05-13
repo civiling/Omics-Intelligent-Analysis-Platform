@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Differential metabolite inputs",
+  "type": "object",
+  "required": ["peak_table", "metadata"],
+  "properties": {
+    "peak_table": {"type": "string"},
+    "metabolite_annotation": {"type": "string"},
+    "metadata": {"type": "string"},
+    "design": {
+      "type": "object",
+      "properties": {
+        "grouping_variable": {"type": "string"},
+        "contrast": {"type": "string"},
+        "covariates": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

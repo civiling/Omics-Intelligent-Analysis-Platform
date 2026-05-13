@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multi-omics correlation network inputs",
+  "type": "object",
+  "required": ["metadata"],
+  "properties": {
+    "feature_table": {"type": "string"},
+    "expression_matrix": {"type": "string"},
+    "metabolite_matrix": {"type": "string"},
+    "metadata": {"type": "string"},
+    "sample_mapping": {
+      "type": "object",
+      "description": "Optional explicit mapping across omics sample identifiers."
+    }
+  }
+}

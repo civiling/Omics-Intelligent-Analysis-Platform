@@ -1,0 +1,4 @@
+chart_type: boxplot
+required_fields:
+  - x
+  - y

@@ -1,0 +1,5 @@
+chart_type: pca
+required_fields:
+  - x
+  - y
+  - label

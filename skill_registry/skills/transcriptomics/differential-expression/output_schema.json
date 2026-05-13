@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Differential expression outputs",
+  "type": "object",
+  "required": ["differential_gene_table", "method_note", "risk_notes"],
+  "properties": {
+    "differential_gene_table": {"type": "string"},
+    "volcano_plot_spec": {"type": "object"},
+    "method_note": {"type": "string"},
+    "risk_notes": {"type": "string"}
+  }
+}

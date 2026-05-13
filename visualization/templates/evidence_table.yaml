@@ -1,0 +1,3 @@
+chart_type: evidence_table
+required_fields:
+  - label
