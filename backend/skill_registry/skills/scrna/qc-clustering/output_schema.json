@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["cell_qc_metrics", "sample_qc_summary", "qc_clustering_report", "umap_embedding"],
+  "properties": {
+    "cell_qc_metrics": {
+      "type": "string"
+    },
+    "sample_qc_summary": {
+      "type": "string"
+    },
+    "qc_clustering_report": {
+      "type": "string"
+    },
+    "umap_embedding": {
+      "type": "string"
+    },
+    "umap_plot_data": {
+      "type": "string"
+    },
+    "qc_violin_plot_data": {
+      "type": "string"
+    }
+  }
+}

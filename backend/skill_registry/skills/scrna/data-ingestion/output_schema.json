@@ -1,0 +1,11 @@
+{
+  "title": "Single-cell RNA-seq data ingestion outputs",
+  "type": "object",
+  "properties": {
+    "expression_matrix_manifest": { "type": "string" },
+    "sample_metadata_template": { "type": "string" },
+    "data_readiness_report": { "type": "string" },
+    "method_note": { "type": "string" },
+    "risk_notes": { "type": "string" }
+  }
+}

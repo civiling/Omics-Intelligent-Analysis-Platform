@@ -1,3 +1,7 @@
+from pathlib import Path
+
+__path__ = [str(Path(__file__).resolve().parent.parent / "backend" / "reports")]
+
 from .collector import ReportDataCollector
 from .exporter import ReportExporter
 from .generator import ReportGenerator

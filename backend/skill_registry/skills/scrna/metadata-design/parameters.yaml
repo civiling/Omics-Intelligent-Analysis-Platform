@@ -1,0 +1,15 @@
+parameters:
+  dataset_id:
+    type: string
+    required: true
+    description: Dataset id created by the ingestion workflow.
+  confirm:
+    type: boolean
+    required: false
+    default: true
+    description: Whether imported rows should be marked confirmed.
+  min_replicates_per_condition:
+    type: integer
+    required: false
+    default: 2
+    description: Minimum sample count per condition for formal pseudobulk.

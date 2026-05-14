@@ -1,3 +1,7 @@
+from pathlib import Path
+
+__path__ = [str(Path(__file__).resolve().parent.parent / "backend" / "skill_registry")]
+
 from .loader import SkillLoader, SkillRegistryError
 from .models import (
     LoadedSkill,

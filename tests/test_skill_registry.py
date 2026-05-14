@@ -8,6 +8,9 @@ from skill_registry.validator import REQUIRED_SKILL_SECTIONS
 
 
 EXPECTED_SKILLS = {
+    "scrna.data_ingestion",
+    "scrna.metadata_design",
+    "scrna.qc_clustering",
     "microbiome.read_qc",
     "microbiome.differential_abundance",
     "transcriptomics.differential_expression",

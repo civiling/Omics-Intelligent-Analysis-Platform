@@ -1,0 +1,13 @@
+{
+  "title": "Single-cell RNA-seq metadata design outputs",
+  "type": "object",
+  "properties": {
+    "metadata_import_report": { "type": "string" },
+    "experiment_design_summary": { "type": "string" },
+    "analysis_mode_recommendation": { "type": "string" },
+    "confidence_gate_result": { "type": "string" },
+    "sample_metadata_template": { "type": "string" },
+    "method_note": { "type": "string" },
+    "risk_notes": { "type": "string" }
+  }
+}

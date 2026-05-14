@@ -1,0 +1,3 @@
+type: local
+path: workflows/scripts/scrna/metadata_design.py
+description: Runs the platform metadata design service and writes design recommendation outputs.

@@ -1,3 +1,7 @@
+from pathlib import Path
+
+__path__ = [str(Path(__file__).resolve().parent.parent / "backend" / "visualization")]
+
 from .chart_spec import load_chart_spec, write_chart_spec
 from .chart_validator import ChartValidator
 from .models import ChartSpec, ChartType, ChartValidationResult, RenderStatus, RenderedChart, RunVisualizationData

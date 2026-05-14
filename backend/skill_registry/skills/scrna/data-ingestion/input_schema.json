@@ -1,0 +1,11 @@
+{
+  "title": "Single-cell RNA-seq data ingestion inputs",
+  "type": "object",
+  "properties": {
+    "matrix_directory": {
+      "type": "string",
+      "description": "Directory containing supported expression matrix files."
+    }
+  },
+  "required": ["matrix_directory"]
+}

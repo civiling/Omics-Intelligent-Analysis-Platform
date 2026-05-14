@@ -1,0 +1,15 @@
+{
+  "title": "Single-cell RNA-seq metadata design inputs",
+  "type": "object",
+  "properties": {
+    "platform_store": {
+      "type": "string",
+      "description": "Directory containing platform object JSON files from ingestion."
+    },
+    "metadata_table": {
+      "type": "string",
+      "description": "Sample metadata CSV or TSV file."
+    }
+  },
+  "required": ["platform_store", "metadata_table"]
+}

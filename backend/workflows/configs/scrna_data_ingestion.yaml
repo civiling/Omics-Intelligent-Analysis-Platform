@@ -1,0 +1,25 @@
+id: scrna.data_ingestion
+name: Single-cell RNA-seq data ingestion workflow
+domain: scrna
+version: 0.1.0
+description: Ingest scRNA-seq expression matrices and register platform objects.
+skill_id: scrna.data_ingestion
+executor_type: local
+script_path: workflows/scripts/scrna/data_ingestion.py
+input_types:
+  - matrix_directory
+output_types:
+  - expression_matrix_manifest
+  - sample_metadata_template
+  - data_readiness_report
+  - method_note
+  - risk_notes
+default_parameters:
+  dataset_name: null
+  organism: unknown
+  disease_context: ""
+required_parameters:
+  - project_name
+timeout_seconds: 3600
+risk_level: low
+requires_review: false

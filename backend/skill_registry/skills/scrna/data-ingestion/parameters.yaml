@@ -1,0 +1,19 @@
+parameters:
+  project_name:
+    type: string
+    required: true
+    description: Project name to create for the ingested dataset.
+  dataset_name:
+    type: string
+    required: false
+    description: Optional dataset name.
+  organism:
+    type: string
+    required: false
+    default: unknown
+    description: human, mouse, or unknown.
+  disease_context:
+    type: string
+    required: false
+    default: ""
+    description: Optional disease context.

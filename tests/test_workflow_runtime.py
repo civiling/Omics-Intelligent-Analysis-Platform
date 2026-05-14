@@ -18,6 +18,9 @@ from workflows.executors import LocalExecutor, PlaceholderExecutor
 
 
 EXPECTED_WORKFLOWS = {
+    "scrna.data_ingestion",
+    "scrna.metadata_design",
+    "scrna.qc_clustering",
     "microbiome.read_qc",
     "microbiome.differential_abundance",
     "transcriptomics.differential_expression",

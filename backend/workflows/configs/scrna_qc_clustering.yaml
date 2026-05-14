@@ -1,0 +1,32 @@
+id: scrna.qc_clustering
+name: Single-cell RNA-seq QC and clustering preview workflow
+domain: scrna
+version: 0.1.0
+description: Compute cell-level QC metrics, apply filtering thresholds, and emit preview embedding and cluster outputs.
+skill_id: scrna.qc_clustering
+executor_type: local
+script_path: workflows/scripts/scrna/qc_clustering.py
+input_types:
+  - platform_store
+output_types:
+  - cell_qc_metrics
+  - sample_qc_summary
+  - qc_clustering_report
+  - umap_embedding
+  - umap_plot_data
+  - qc_violin_plot_data
+  - method_note
+  - risk_notes
+default_parameters:
+  min_genes: 200
+  max_genes: null
+  min_counts: 0
+  max_counts: null
+  max_mito_pct: 20.0
+  max_cells_per_sample: 2000
+  cluster_count: 4
+required_parameters:
+  - dataset_id
+timeout_seconds: 3600
+risk_level: low
+requires_review: false

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": ["platform_store", "dataset_id"],
+  "properties": {
+    "platform_store": {
+      "type": "string",
+      "description": "Path to the platform object store generated during data ingestion."
+    },
+    "dataset_id": {
+      "type": "string",
+      "description": "Dataset id to process."
+    }
+  }
+}

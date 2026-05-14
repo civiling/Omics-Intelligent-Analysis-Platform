@@ -1,0 +1,7 @@
+min_genes: 200
+max_genes: null
+min_counts: 0
+max_counts: null
+max_mito_pct: 20.0
+max_cells_per_sample: 2000
+cluster_count: 4

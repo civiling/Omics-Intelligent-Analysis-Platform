@@ -1,0 +1,2 @@
+type: local
+path: workflows/scripts/scrna/qc_clustering.py

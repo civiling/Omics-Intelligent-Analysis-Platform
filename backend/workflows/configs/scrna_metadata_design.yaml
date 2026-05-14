@@ -1,0 +1,27 @@
+id: scrna.metadata_design
+name: Single-cell RNA-seq metadata design workflow
+domain: scrna
+version: 0.1.0
+description: Import sample metadata and recommend a single-cell analysis mode.
+skill_id: scrna.metadata_design
+executor_type: local
+script_path: workflows/scripts/scrna/metadata_design.py
+input_types:
+  - platform_store
+  - metadata_table
+output_types:
+  - metadata_import_report
+  - experiment_design_summary
+  - analysis_mode_recommendation
+  - confidence_gate_result
+  - sample_metadata_template
+  - method_note
+  - risk_notes
+default_parameters:
+  confirm: true
+  min_replicates_per_condition: 2
+required_parameters:
+  - dataset_id
+timeout_seconds: 3600
+risk_level: low
+requires_review: false
